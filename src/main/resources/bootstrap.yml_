@@ -1,0 +1,106 @@
+spring:
+  cloud:
+    config:
+      username: ${my.config.server.username}
+      password: ${my.config.server.password}
+      label: ${spring.cloud.config.label}
+      uri: ${spring.cloud.config.uri}
+      enabled: false
+      failFast: true
+    bus:
+      enabled: false
+      amqp:
+        enabled: false
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+---
+
+spring:
+  profiles: my-dev
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+
+---
+
+spring:
+  profiles: my-qa
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+
+---
+
+spring:
+  profiles: my-int
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+
+---
+
+spring:
+  profiles: my-stg-g1
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+
+---
+
+spring:
+  profiles: my-stg-r1
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+
+---
+
+spring:
+  profiles: my-prd-g1
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+
+---
+
+spring:
+  profiles: my-prd-r2
+  cloud:
+    config:
+      enabled: true
+    bus:
+      enabled: true
+      amqp:
+        enabled: true
+        
+---        

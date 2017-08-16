@@ -1,0 +1,7 @@
+# Properties files to look for in the cloud config
+spring.cloud.config.name=my-eureka-server
+service.name=eureka-server
+spring.application.name=eureka-server
+
+# Default port the server starts on
+server.port=9799

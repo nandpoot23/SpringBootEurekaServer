@@ -1,0 +1,58 @@
+********************************************************************************************************************
+
+Eureka home page when server is running:- http://localhost:9799/
+
+********************************************************************************************************************
+
+How to get process id of a Spring Boot application?
+
+Spring Boot provides the class ApplicationPidFileWriter, which will then write the PID into a file. We can activate 
+it by adding it as a listener to the SpringApplication.
+
+SpringApplication springApplication = new SpringApplication(DemoApplication.class);
+springApplication.addListeners(new ApplicationPidFileWriter());
+springApplication.run(args);
+
+The constructor of ApplicationPidFileWriter can also take a String or a File object with a custom filename. Then we 
+can read the PID from that file and use it in your scripts.
+
+********************************************************************************************************************
+
+my-dev:
+endPoint: http://myeureka-service-dev.m1.app.cloud.gopal.net
+msgPrefix: Yes
+
+my-qa:
+endPoint: http://myeureka-service-qa.m1.app.cloud.gopal.net
+msgPrefix: Yes
+
+my-int:
+endPoint: http://myeureka-service-int.m1.app.cloud.gopal.net
+msgPrefix: Yes
+
+my-stg-g1:
+endPoint: http://myeureka-service-stg.g1.app.cloud.gopal.net
+msgPrefix: Yes
+
+my-stg-r1:
+endPoint: http://myeureka-service-stg.r1.app.cloud.gopal.net
+msgPrefix: Yes
+
+my-prd-g1:
+endPoint: http://myeureka-service-prd.g1.app.cloud.gopal.net
+msgPrefix: Yes
+
+my-prd-r1:
+endPoint: http://myeureka-service-prd.r1.app.cloud.gopal.net
+msgPrefix: Yes
+
+********************************************************************************************************************
+
+Help:-
+
+https://github.com/Netflix/eureka/wiki/Eureka-at-a-glance
+https://github.com/Netflix/eureka/wiki/Configuring-Eureka
+https://blog.de-swaef.eu/the-netflix-stack-using-spring-boot/
+http://www.baeldung.com/spring-cloud-netflix-eureka
+
+********************************************************************************************************************
